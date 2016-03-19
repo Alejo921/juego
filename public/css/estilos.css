@@ -1,0 +1,335 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+@font-face{
+	font-family: 'titulo';
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+body
+{
+	background: url(../img/4.jpg);
+	background-size: cover;
+	font-family: sans-serif;
+	overflow: hidden;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#chartContainer{
+	margin-left: 10%;
+	margin-top: 10%;
+	height: 200px;
+	width: 40%;
+}
+#logout{
+	position: absolute;
+	margin-top: -3%;
+	right: 30px;
+}
+#nombre_us{
+	position: absolute;
+	margin-top: -4%;
+	right: 20%;
+}
+#menu_p{
+	height:1.5em;
+	font-size: 200%;
+	font-family: 'titulo';
+}
+.inicio{
+	font-size: 1.8em;
+	color:white;
+	font-family: 'titulo';
+	padding: 2%;
+	border-radius: 20px;
+	background-color: #22A;
+	background-color:#22A;
+	  background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #BBE3AE), color-stop(0.02, #AEE09E), color-stop(1, #22A));
+	  background-image:-moz-linear-gradient(top, #BBE3AE, #AEE09E 2%, #22A);
+	  background-image:-o-linear-gradient(top, #BBE3AE, #AEE09E 2%, #22A);
+	box-shadow: 0px 4px 1px 1px rgba(199, 199, 199, 0.62);
+	text-align: center;
+	width: 70%;	
+	position: absolute;
+	cursor: pointer;
+}
+.inicio:hover{
+	cursor: pointer;
+	width: 102%;
+	font-size: 2.5em;
+    margin-left: -1%;
+    margin-top: 150px;
+}
+#conte{
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	background-color: red;
+	
+}
+#diag{
+	width: 100%;
+}
+#play{
+  
+	width: 100%;
+}
+#ins{
+	width: 100%;
+}
+.main-image-wrapper {
+    text-align: center;    
+    height: 50px;
+    margin: 1% 0;
+}
+#reloj{
+	background: url(../img/reloj.gif);
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 10%;
+	height: 200px;
+	margin-left: 45%;
+	margin-top: 420px;
+}
+#opcion_1{
+	position: absolute;
+	margin-left: 5%;
+	margin-top: 22px;
+}
+#opcion_2{
+	position: absolute;
+	margin-left: 5%;
+	margin-top: 280px;
+}
+#opcion_3{
+	position: absolute;
+	margin-left: 75%;
+	margin-top: 22px;
+}
+#opcion_4{
+	position: absolute;
+	margin-left: 75%;
+	margin-top: 280px;
+}
+
+#sound_1{
+	position: absolute;
+	margin-left: 5%;
+	margin-top: 235px;
+	width: 20%;
+}
+#sound_2{
+	position: absolute;
+	margin-left: 5%;
+	margin-top: 490px;
+	width: 20%;
+}
+#sound_3{
+	position: absolute;
+	margin-left: 75%;
+	margin-top: 235px;
+	width: 20%;
+}
+#sound_4{
+	position: absolute;
+	margin-left: 75%;
+	margin-top: 490px;
+	width: 20%;
+}
+#titulo
+{
+	position: absolute;
+	margin: 10px;
+	float: left;
+	padding-left: 10px;
+	width: 60%;
+}
+
+#tiempo
+{
+	
+	margin: 10px;
+	float: right;
+	width: 20%;
+	text-align: right;
+	padding-right: 5px;
+}
+
+
+.basePregunta
+{
+	border: 1px solid rgba(199, 199, 199, 0.78);
+	height: 200px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	position: absolute;
+	top: 150px;
+	width: 300%;
+	margin-left: -100%;
+}
+
+#base1
+{
+	-ms-transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+    position: absolute;
+	margin-top: 0 auto;
+	width: 30%;
+	margin-left: 35%;	
+
+}
+
+#base2
+{
+	-ms-transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    position: absolute;
+	margin-top: 0 auto;
+	width: 30%;
+	margin-left: 35%;	
+}
+
+#pregunta
+{
+	position: absolute;
+	margin-top: 0 auto;
+	padding-top: 50px;
+	height: 150px;
+	color: #434343;
+	text-align: center;
+	font-size: 1.7em;
+	width: 30%;
+	margin-left: 35%;	
+}
+
+#contenedor
+{
+	position: relative;
+	width: 10%;
+	margin: 0 auto;
+	margin-top: 35px;
+}
+
+header
+{
+	width:100%;
+	height:2.0em;
+	background-color:#4F555D;
+	box-shadow:1px 1px 10px #4C4747;
+	color:#fff;
+	font-size:1.5em;
+	text-shadow: 4px 4px 4px #2D4D80;
+}
+
+#opciones
+{
+	position: absolute;
+	top: 210px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 35px;
+}
+
+.botones
+{
+	width: 20%;
+	height: 200px;
+	border: 1px solid rgba(199, 199, 199, 0.42);
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 4px 1px 1px rgba(199, 199, 199, 0.62);
+	text-align: center;
+	line-height: 55px;
+	font-size: 3em;
+	color: #434343;
+	cursor: pointer;
+	display: none;
+	-webkit-tap-highlight-color:transparent;
+}
+.botones2
+{
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgba(199, 199, 199, 0.42);
+	margin-top: 10px;
+	border-radius: 10px;
+	background-color: #FFFFFF;
+	box-shadow: 0px 4px 1px 1px rgba(199, 199, 199, 0.62);
+	text-align: center;
+	line-height: 55px;
+	font-size: 3em;
+	color: #434343;
+	cursor: pointer;
+	display: none;
+	-webkit-tap-highlight-color:transparent;
+}
+.botones:hover{
+	cursor: pointer;
+	width: 22%;
+	height: 220px;
+}
+.correcto
+{
+	background-color: #73BF43;
+	box-shadow: 0px 4px 1px 1px rgba(115, 191, 67, 0.41);
+	border: 1px solid rgba(115, 191, 67, 0.41);
+	color: white;
+}
+
+.incorrecto
+{
+	background-color: #EB1C24;
+	box-shadow: 0px 4px 1px 1px rgba(235, 28, 36, 0.48);
+	border: 1px solid rgba(235, 28, 36, 0.64);
+	color: white;
+}
+
+#mensaje
+{
+	position: absolute;
+	top: 50px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 35px;
+	text-align: center;
+	font-size: 2.5em;
+	font-weight: bold;
+	text-shadow: 4px 1px 1px rgba(8, 8, 8, 0.34);
+	display: none;
+}
+
+#fade
+{
+   /*display: block;*/  /* ensures it’s invisible until it’s called */
+   position: absolute;  /* makes the div go into a position that’s absolute to the browser viewing area */
+   left: 0%; /* makes the div span all the way across the viewing area */
+   top: 0%; /* makes the div span all the way across the viewing area */
+   background-color: black;
+   -moz-opacity: 0.6; /* makes the div transparent, so you have a cool overlay effect */
+   opacity: .60;
+   filter: alpha(opacity=60);
+   width: 100%;
+   height: 100%;
+   z-index: 10; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
+}
+
+#loading
+{
+   background:#000 url("../img/loader.gif") no-repeat center center;
+   height: 50px;
+   width: 50px;
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   margin: -25px 0 0 -25px;
+   z-index: 100;
+}

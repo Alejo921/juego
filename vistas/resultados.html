@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JUEGO DE NIÑOS</title>
+  </head>
+  <body>
+    <header id="menu_p">
+      <center>RESULTADOS</center>
+    </header>
+    <div id="chartContainer"></div>
+    <div id="header"><span>HISTORIAL DE RESULTADOS</span></div>
+    <div id="wrapper">
+      <div id="scroller">
+        <ul id="thelist"></ul>
+      </div>
+    </div>
+    <div id="footer" class="inicio" >VOLVER A MENU</div>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/scroll.css">
+    <link href="css/sweet-alert.css" rel="stylesheet">
+    <script src="js/sweet-alert.js"></script>
+    <script type="text/javascript" src="js/canvasjs.min.js"></script>
+    <script src="js/script_6.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript">
+      window.onload = function () {
+        $('#footer').each(function () {
+              $(this).css({
+                  'font-size': ($(window).height() * 0.03),
+                  'margin-top': ($(window).height() * 0.2)
+              });
+          });
+          $('#chartContainer').each(function () {
+                $(this).css({
+                    'height': ($(window).height() *0.3)
+                });
+            });
+          $('#header').each(function () {
+              $(this).css({
+                  'font-size': ($(window).width() * 0.015)
+              });
+          });
+          $('#wrapper').each(function () {
+              $(this).css({
+                  'font-size': ($(window).height() * 0.03),
+                  'height': ($(window).height() *0.2),
+                  'margin-top': ($(window).height() * 0.00005)
+              });
+          });
+           $('#scroller li').each(function () {
+              $(this).css({
+                  'font-size': ($(window).width() * 0.01)
+              });
+          });
+        $(window).resize(function(event) {
+            $('#footer').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).height() * 0.03),
+                      'margin-top': ($(window).height() * 0.2)
+                  });
+              });
+            $('#chartContainer').each(function () {
+                $(this).css({
+                    'height': ($(window).height() *0.3)
+                });
+            });
+            $('#header').each(function () {
+              $(this).css({
+                  'font-size': ($(window).width() * 0.01)
+              });
+          });
+            $('#wrapper').each(function () {
+                $(this).css({
+                    'font-size': ($(window).height() * 0.03),
+                    'height': ($(window).height() *0.2)
+                });
+            });
+            $('#scroller li').each(function () {
+              $(this).css({
+                  'font-size': ($(window).width() * 0.01)
+              });
+          });
+         });
+
+
+
+
+
+
+        function readCookie(name) {
+            var i, c, ca, nameEQ = name + "=";
+            ca = document.cookie.split(';');
+            for(i=0;i < ca.length;i++) {
+                c = ca[i];
+                while (c.charAt(0)==' ') {
+                    c = c.substring(1,c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length,c.length);
+                }
+            }
+            return '';
+        }
+        var n1=readCookie('n1'), n2=readCookie('n2'), n3=readCookie('n3'), n4=readCookie('n4'), n5=readCookie('n5');
+        var chart = new CanvasJS.Chart("chartContainer",
+        {
+          animationEnabled: true,
+          title:{
+            text: "RESULTADOS"
+          },
+          data: [
+          {
+            type: "column", //change type to bar, line, area, pie, etc
+            dataPoints: [
+              { label: "nuvel 1", y: n1 *1},
+              { label: "nuvel 2", y: n2 *1},
+              { label: "nuvel 3",  y: n3 *1},                                    
+              { label: "nuvel 4",  y: n4 *1},
+              { label: "nuvel 5",  y: n5 *1}
+            ]
+          }
+          ]
+          });
+
+        chart.render();
+      }
+      </script>
+  </body>
+</html>

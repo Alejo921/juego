@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <title></title>
+  </head>
+  <body class="page">
+    <header id="menu_p">
+      <center>JUEGO DE NIÑOS</center>
+    </header>
+    <div class="main-image-wrapper"></div>
+    <form id="form" action="/registro" method="POST">
+      <div id="errorMsg" align="center"></div>
+      <input id="nombre" type="text" placeholder="Nombre" name="nombre" class="text-input--underbar"><br>
+      <input id="correo" type="text" placeholder="E-mail" name="correo" class="text-input--underbar"><br>
+      <input id="username" type="text" placeholder="Nombre de Usuario" name="username" class="text-input--underbar"><br>
+      <input id="password" type="password" placeholder="Contraseña" value="" name="password" class="text-input--underbar"><br>
+      <input id="confirmar_password" type="password" placeholder="Confirmar contraseña" value="" name="confirmar_password" class="text-input--underbar"><br>
+      <button id="b1" class="inicio">Registrarme</button>
+    </form><br><a id="r1" href="/login">Autenticarme</a>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/onsen-css-components-default.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/registro.js"></script>
+    <script>
+      window.onload = (function() {
+         var mensaje = '';
+         if(mensaje != "")
+             sweetAlert("Error", mensaje +"", "error"); 
+         $('#form').each(function () {
+              $(this).css({
+                  'margin-top': -($(window).height() *0.1),
+                  'height': ($(window).height() * 0.55)
+              });
+          });
+         $('#nombre').each(function () {
+              $(this).css({
+                  'height': ($(window).height() * 0.09),
+                  'font-size': ($(window).height() *0.04),
+                  'margin-top': -2,
+                  'padding': 0
+              });
+          });
+         $('#correo').each(function () {
+              $(this).css({
+                  'height': ($(window).height() * 0.09),
+                  'font-size': ($(window).height() *0.04),
+                  'margin-top': -2,
+                  'padding': 0
+              });
+          });
+         $('#username').each(function () {
+              $(this).css({
+                  'height': ($(window).height() * 0.09),
+                  'font-size': ($(window).height() *0.04),
+                  'margin-top': -2,
+                  'padding': 0
+              });
+          });
+         $('#password').each(function () {
+              $(this).css({
+                  'height': ($(window).height() * 0.09),
+                  'font-size': ($(window).height() *0.04),
+                  'margin-top': -2,
+                  'padding': 0
+      
+              });
+          });
+         $('#confirmar_password').each(function () {
+              $(this).css({
+                  'height': ($(window).height() * 0.09),
+                  'font-size': ($(window).height() *0.04),
+                  'margin-top': -2,
+                  'padding': 0
+              });
+          });
+         $('#b1').each(function () {
+              $(this).css({
+                  'font-size': ($(window).height() *0.05),
+                  'margin-top': -2,
+                  'height': ($(window).height() * 0.07)
+              });
+          });
+         $('#r1').each(function () {
+              $(this).css({
+                  'margin-top': ($(window).height() *0.07),
+                  'margin-top': 60,
+                  'font-size': ($(window).height() *0.05)
+              });
+          });
+         $(window).resize(function(event) {
+             $('#form').each(function () {
+                  $(this).css({
+                      'margin-top': -($(window).height() *0.1),
+                      'height': ($(window).height() * 0.55)
+                  });
+              });
+             $('#nombre').each(function () {
+                  $(this).css({
+                      'height': ($(window).height() * 0.09),
+                      'font-size': ($(window).height() *0.04),
+                      'margin-top': -2,
+                      'padding': 0
+                  });
+              });
+             $('#correo').each(function () {
+                  $(this).css({
+                      'height': ($(window).height() * 0.09),
+                      'font-size': ($(window).height() *0.04),
+                      'margin-top': -2,
+                      'padding': 0
+                  });
+              });
+             $('#username').each(function () {
+                  $(this).css({
+                      'height': ($(window).height() * 0.09),
+                      'font-size': ($(window).height() *0.04),
+                      'margin-top': -2,
+                      'padding': 0
+                  });
+              });
+             $('#password').each(function () {
+                  $(this).css({
+                      'height': ($(window).height() * 0.09),
+                      'font-size': ($(window).height() *0.04),
+                      'margin-top': -2,
+                      'padding': 0
+      
+                  });
+              });
+             $('#confirmar_password').each(function () {
+                  $(this).css({
+                      'height': ($(window).height() * 0.09),
+                      'font-size': ($(window).height() *0.04),
+                      'margin-top': -2,
+                      'padding': 0
+                  });
+              });
+             $('#b1').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).height() *0.05),
+                      'margin-top': -2,
+                      'height': ($(window).height() * 0.07)
+                  });
+              });
+             $('#r1').each(function () {
+                  $(this).css({
+                      'margin-top': ($(window).height() *0.07),
+                      'margin-top': 60,
+                      'font-size': ($(window).height() *0.05)
+                  });
+              });
+         }); 
+      });
+    </script>
+  </body>
+</html>

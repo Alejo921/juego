@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png">
+    <title></title>
+  </head>
+  <body>
+    <header id="menu_p">
+      <center>MENU PRINCIPAL</center>
+      <label id="nombre_us" for="">#{usuario}</label><a href="/logout"><img id="logout" src="img/exit.png" border="0" class="iconHeader"></a>
+    </header>
+    <div id="conte"><span id="diag" class="inicio">Diagnostico</span><span id="play" class="inicio">Jugar</span><span id="ins" class="inicio">instrucciones</span></div>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <link href="css/sweet-alert.css" rel="stylesheet">
+    <script src="https://code.createjs.com/createjs-2015.05.21.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/sweet-alert.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      window.onload = (function() {
+        var audio = new Audio('sounds/menu.mp3');
+        audio.loop = true;
+        audio.play();
+         var consumeServicios = function(val, callback)
+          {
+            $.ajax(
+            {
+              url     : "variable",
+              type    : "POST",
+              data    : "",
+              dataType  : "json",
+              contentType: "application/json; charset=utf-8"
+            }).done(function(data)
+            {
+                    callback(data);
+            });
+          };
+
+          consumeServicios("", function(data){
+            usuario = data.usuario[0].nombre;
+            $("#nombre_us").html(usuario);
+            writeCookie('usuario', usuario, 3);
+          });
+         $('#conte').each(function () {
+          });
+         $('#diag').each(function () {
+              $(this).css({
+                  'font-size': ($(window).height() * 0.07),
+                  'margin-top': ($(window).height() * 0.2)
+              });
+          });
+         $('#play').each(function () {
+              $(this).css({
+                  'font-size': ($(window).height() * 0.07),
+                  'margin-top': ($(window).height() * 0.4)
+              });
+          });
+         $('#ins').each(function () {
+              $(this).css({
+                  'font-size': ($(window).height() * 0.07),
+                  'margin-top': ($(window).height() * 0.6)
+              });
+          });
+         $('#menu_p').each(function () {
+              $(this).css({
+                  'font-size': ($(window).width() * 0.03)
+              });
+          });
+         $('#nombre_us').each(function () {
+              $(this).css({
+                  'font-size': ($(window).width() * 0.03)
+              });
+          });
+         $('#logout').each(function () {
+              $(this).css({
+                  'width': ($(window).width() *0.04),
+                  'height': ($(window).width() *0.04)
+              });
+          });
+         $(window).resize(function(event) {
+            $('#diag').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).height() * 0.07),
+                      'margin-top': ($(window).height() * 0.2)
+                  });
+              });
+             $('#play').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).height() * 0.07),
+                      'margin-top': ($(window).height() * 0.4)
+                  });
+              });
+             $('#ins').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).height() * 0.07),
+                      'margin-top': ($(window).height() * 0.6)
+                  });
+              });
+             $('#menu_p').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).width() * 0.03)
+                  });
+              });
+             $('#nombre_us').each(function () {
+                  $(this).css({
+                      'font-size': ($(window).width() * 0.03)
+                  });
+              });
+             $('#logout').each(function () {
+                  $(this).css({
+                      'width': ($(window).width() *0.04),
+                      'height': ($(window).width() *0.04)
+                  });
+              });
+         });
+      });
+      
+      
+      function writeCookie(name,value,days) {
+          var date, expires;
+          if (days) {
+              date = new Date();
+              date.setTime(date.getTime()+(days*24*60*60*1000));
+              expires = "; expires=" + date.toGMTString();
+                  }else{
+              expires = "";
+          }
+          document.cookie = name + "=" + value + expires + "; path=/";
+      }
+
+    </script>
+  </body>
+</html>
